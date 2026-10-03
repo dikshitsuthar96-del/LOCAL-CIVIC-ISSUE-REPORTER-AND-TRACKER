@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <rect width="800" height="600" fill="#94a3b8" />
+  <rect x="100" y="150" width="600" height="350" fill="#cbd5e1" stroke="#64748b" stroke-width="4" />
+  <path d="M 220,150 L 320,300 L 280,420 L 350,500" stroke="#0f172a" stroke-width="6" fill="none" />
+  <path d="M 450,150 L 320,300 L 480,380 L 520,500" stroke="#0f172a" stroke-width="5" fill="none" />
+  <g transform="translate(20, 20)">
+    <rect width="380" height="74" rx="4" fill="rgba(11, 34, 57, 0.92)" stroke="#e11d48" stroke-width="2" />
+    <text x="14" y="24" fill="#f43f5e" font-family="Arial, sans-serif" font-size="11" font-weight="bold" letter-spacing="1">⚠️ CIVIC DEFECT EVIDENCE • PEDESTRIAN</text>
+    <text x="14" y="44" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Cracked Concrete Pavement Trip Hazard</text>
+    <text x="14" y="62" fill="#94a3b8" font-family="monospace" font-size="11">DISPLACEMENT: 45mm | PEDESTRIAN RISK: HIGH</text>
+  </g>
+  <g transform="translate(610, 20)">
+    <rect width="170" height="38" rx="4" fill="#e11d48" stroke="#ffffff" stroke-width="1.5" />
+    <text x="85" y="24" fill="#ffffff" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">BEFORE REPAIR</text>
+  </g>
+</svg>

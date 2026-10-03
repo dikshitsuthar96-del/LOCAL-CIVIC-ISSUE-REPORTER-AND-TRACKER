@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#05101e" />
+      <stop offset="40%" stop-color="#0a1d36" />
+      <stop offset="75%" stop-color="#14345c" />
+      <stop offset="100%" stop-color="#244d7e" />
+    </linearGradient>
+    <linearGradient id="roadGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e2430" />
+      <stop offset="100%" stop-color="#0d1117" />
+    </linearGradient>
+    <linearGradient id="streetGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255, 220, 150, 0.4)" />
+      <stop offset="100%" stop-color="rgba(255, 220, 150, 0)" />
+    </linearGradient>
+    <linearGradient id="saffronStripe" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF9933" />
+      <stop offset="100%" stop-color="#e67e17" />
+    </linearGradient>
+  </defs>
+
+  <!-- Deep Twilight Sky -->
+  <rect width="1920" height="1080" fill="url(#skyGrad)" />
+
+  <!-- Stars & Constellations in Upper Sky -->
+  <g fill="#ffffff" opacity="0.6">
+    <circle cx="150" cy="80" r="1.5" />
+    <circle cx="340" cy="140" r="1" />
+    <circle cx="560" cy="90" r="2" />
+    <circle cx="820" cy="60" r="1.5" />
+    <circle cx="1120" cy="120" r="1" />
+    <circle cx="1400" cy="70" r="2" />
+    <circle cx="1680" cy="110" r="1.5" />
+    <circle cx="1820" cy="80" r="1" />
+  </g>
+
+  <!-- Distant Mountain / Ridge Silhouette -->
+  <path d="M 0,620 Q 350,560 700,610 T 1400,590 T 1920,630 L 1920,720 L 0,720 Z" fill="#091b30" />
+
+  <!-- City Skyline Silhouette: Municipal Secretariat, Towers, Bridges -->
+  <g fill="#0e233d">
+    <!-- Left Commercial Hub -->
+    <rect x="80" y="440" width="90" height="260" />
+    <rect x="190" y="480" width="70" height="220" />
+    <rect x="280" y="410" width="110" height="290" />
+    <!-- Center Left Bridge Towers -->
+    <polygon points="420,700 440,380 460,700" />
+    <polygon points="490,700 510,380 530,700" />
+    <line x1="400" y1="520" x2="550" y2="520" stroke="#163861" stroke-width="4" />
+    <!-- Central Municipal Corporation Secretariat Building -->
+    <rect x="740" y="320" width="440" height="380" rx="4" fill="#132c4c" />
+    <!-- Classical Dome atop Municipal Secretariat -->
+    <path d="M 910,320 C 910,240 1010,240 1010,320 Z" fill="#1a3b63" />
+    <!-- Ashoka Stambh / Flagpole atop the Municipal Dome -->
+    <line x1="960" y1="240" x2="960" y2="160" stroke="#d4af37" stroke-width="4" />
+    <!-- Indian National Tricolor Flag waving -->
+    <rect x="960" y="160" width="70" height="15" fill="#FF9933" />
+    <rect x="960" y="175" width="70" height="15" fill="#FFFFFF" />
+    <rect x="960" y="190" width="70" height="15" fill="#138808" />
+    <circle cx="995" cy="182" r="5" fill="#000080" />
+
+    <!-- Illuminated Windows in Municipal Secretariat -->
+    <g fill="#ffd778" opacity="0.85">
+      <rect x="770" y="350" width="20" height="30" rx="2" />
+      <rect x="810" y="350" width="20" height="30" rx="2" />
+      <rect x="850" y="350" width="20" height="30" rx="2" />
+      <rect x="890" y="350" width="20" height="30" rx="2" />
+      <rect x="1030" y="350" width="20" height="30" rx="2" />
+      <rect x="1070" y="350" width="20" height="30" rx="2" />
+      <rect x="1110" y="350" width="20" height="30" rx="2" />
+      <rect x="1150" y="350" width="20" height="30" rx="2" />
+      <!-- Middle Row -->
+      <rect x="770" y="410" width="20" height="30" rx="2" />
+      <rect x="810" y="410" width="20" height="30" rx="2" />
+      <rect x="850" y="410" width="20" height="30" rx="2" />
+      <rect x="1070" y="410" width="20" height="30" rx="2" />
+      <rect x="1110" y="410" width="20" height="30" rx="2" />
+      <rect x="1150" y="410" width="20" height="30" rx="2" />
+    </g>
+
+    <!-- Right Side Modern Smart City Tech Park -->
+    <rect x="1220" y="440" width="80" height="260" />
+    <rect x="1320" y="390" width="100" height="310" />
+    <rect x="1440" y="470" width="90" height="230" />
+    <rect x="1560" y="420" width="130" height="280" />
+    <rect x="1710" y="460" width="120" height="240" />
+  </g>
+
+  <!-- Translucent Digital Smart-Grid Overlay -->
+  <g stroke="rgba(56, 189, 248, 0.15)" stroke-width="1" fill="none">
+    <line x1="0" y1="700" x2="1920" y2="700" />
+    <line x1="200" y1="500" x2="400" y2="700" />
+    <line x1="600" y1="450" x2="800" y2="700" />
+    <line x1="1300" y1="450" x2="1100" y2="700" />
+    <line x1="1700" y1="500" x2="1500" y2="700" />
+    <!-- Node points -->
+    <circle cx="400" cy="700" r="4" fill="#38bdf8" />
+    <circle cx="800" cy="700" r="4" fill="#38bdf8" />
+    <circle cx="1100" cy="700" r="4" fill="#38bdf8" />
+    <circle cx="1500" cy="700" r="4" fill="#38bdf8" />
+  </g>
+
+  <!-- Foreground: 4-Lane Modern Municipal Avenue & Boulevard -->
+  <polygon points="0,1080 1920,1080 1450,700 470,700" fill="url(#roadGrad)" />
+
+  <!-- Road Center Median & Thermoplastic Yellow Markings -->
+  <polygon points="950,1080 970,1080 962,700 958,700" fill="#facc15" />
+  <!-- White Broken Lane Dividers with Perspective -->
+  <polygon points="680,1080 700,1080 740,930 732,930" fill="#ffffff" />
+  <polygon points="760,890 774,890 790,820 784,820" fill="#ffffff" />
+  <polygon points="805,790 815,790 825,745 820,745" fill="#ffffff" />
+
+  <polygon points="1240,1080 1220,1080 1180,930 1188,930" fill="#ffffff" />
+  <polygon points="1160,890 1146,890 1130,820 1136,820" fill="#ffffff" />
+  <polygon points="1115,790 1105,790 1095,745 1100,745" fill="#ffffff" />
+
+  <!-- Modern Dual-Arm LED Municipal Streetlight Poles -->
+  <!-- Left Streetlight Pole -->
+  <g>
+    <line x1="380" y1="700" x2="330" y2="460" stroke="#cbd5e1" stroke-width="6" />
+    <path d="M 330,460 Q 320,430 360,420" fill="none" stroke="#cbd5e1" stroke-width="5" />
+    <ellipse cx="365" cy="422" rx="15" ry="6" fill="#fef08a" />
+    <!-- Warm Illumination Beam onto Road -->
+    <polygon points="365,425 200,900 580,900" fill="url(#streetGlow)" />
+  </g>
+
+  <!-- Right Streetlight Pole -->
+  <g>
+    <line x1="1540" y1="700" x2="1590" y2="460" stroke="#cbd5e1" stroke-width="6" />
+    <path d="M 1590,460 Q 1600,430 1560,420" fill="none" stroke="#cbd5e1" stroke-width="5" />
+    <ellipse cx="1555" cy="422" rx="15" ry="6" fill="#fef08a" />
+    <!-- Warm Illumination Beam onto Road -->
+    <polygon points="1555,425 1340,900 1720,900" fill="url(#streetGlow)" />
+  </g>
+
+  <!-- Bottom National Pride Accent Strip -->
+  <rect x="0" y="1068" width="1920" height="12" fill="url(#saffronStripe)" />
+</svg>

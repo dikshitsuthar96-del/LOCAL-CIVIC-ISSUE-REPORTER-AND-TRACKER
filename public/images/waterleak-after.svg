@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <!-- Dry Restored Road & Concrete Curb Background -->
+  <rect width="800" height="600" fill="#475569" />
+  <rect x="0" y="160" width="800" height="60" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3" />
+  <rect x="0" y="0" width="800" height="160" fill="#e2e8f0" />
+
+  <!-- Clean Neatly Backfilled & Sealed Valve Pit -->
+  <rect x="300" y="170" width="200" height="140" rx="8" fill="#1e293b" stroke="#334155" stroke-width="3" />
+
+  <!-- New Cast Iron Heavy-Duty Municipal Valve Cover & Flange -->
+  <circle cx="400" cy="240" r="50" fill="#0f172a" stroke="#d97706" stroke-width="4" />
+  <!-- Municipal Water Board Inscription -->
+  <text x="400" y="236" fill="#fbbf24" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">MUNICIPAL</text>
+  <text x="400" y="252" fill="#ffffff" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">WATER BOARD</text>
+  <!-- Flange Hex Bolts -->
+  <circle cx="400" cy="200" r="4" fill="#fbbf24" />
+  <circle cx="440" cy="240" r="4" fill="#fbbf24" />
+  <circle cx="400" cy="280" r="4" fill="#fbbf24" />
+  <circle cx="360" cy="240" r="4" fill="#fbbf24" />
+
+  <!-- Dry Asphalt Surface with Fresh Bitumen Seal around Pit -->
+  <rect x="290" y="160" width="220" height="160" rx="12" fill="none" stroke="#0f172a" stroke-width="6" opacity="0.7" />
+
+  <!-- Official Water Dept Proof of Work Stamp -->
+  <g transform="translate(420, 360)">
+    <rect x="-10" y="-10" width="350" height="150" rx="8" fill="rgba(6, 78, 59, 0.95)" stroke="#34d399" stroke-width="2.5" />
+    <circle cx="45" cy="65" r="36" fill="#047857" stroke="#fbbf24" stroke-width="2.5" />
+    <text x="45" y="60" fill="#fbbf24" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">LEAK</text>
+    <text x="45" y="75" fill="#ffffff" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">✓</text>
+    <text x="45" y="88" fill="#fbbf24" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle">SEALED</text>
+
+    <text x="96" y="28" fill="#34d399" font-family="Arial, sans-serif" font-size="12" font-weight="bold" letter-spacing="1">
+      WATER WORKS PROOF OF WORK
+    </text>
+    <text x="96" y="50" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+      150mm Flange Coupling Replaced
+    </text>
+    <text x="96" y="70" fill="#a7f3d0" font-family="monospace" font-size="11">
+      PRESSURE TESTED: 6.5 BAR (STABLE)
+    </text>
+    <text x="96" y="88" fill="#a7f3d0" font-family="monospace" font-size="11">
+      STATUS: Zero Leakage, Road Dry
+    </text>
+    <text x="96" y="106" fill="#6ee7b7" font-family="monospace" font-size="10">
+      CERTIFICATE: POW-WATER-2026-0914
+    </text>
+  </g>
+
+  <!-- Green "AFTER: SEALED & RESTORED" Banner -->
+  <g transform="translate(510, 20)">
+    <rect width="270" height="38" rx="4" fill="#059669" stroke="#ffffff" stroke-width="1.5" />
+    <text x="135" y="24" fill="#ffffff" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">
+      ✓ AFTER: SEALED &amp; RESTORED
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,143 @@
+{
+  "entities": {
+    "GovUser": {
+      "title": "GovUser",
+      "description": "Government staff, dispatchers, supervisors, and administrators",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "badgeNumber": { "type": "string" },
+        "name": { "type": "string" },
+        "title": { "type": "string" },
+        "email": { "type": "string" },
+        "role": { "type": "string", "enum": ["CITY_ADMIN", "DEPT_DISPATCHER", "FIELD_SUPERVISOR", "AUDITOR"] },
+        "departmentId": { "type": "string" },
+        "departmentName": { "type": "string" },
+        "clearanceLevel": { "type": "string" },
+        "lastLoginAt": { "type": "string" },
+        "token": { "type": "string" }
+      },
+      "required": ["id", "badgeNumber", "name", "role", "departmentId"]
+    },
+    "CitizenUser": {
+      "title": "CitizenUser",
+      "description": "Registered or auto-generated citizen user profiles with tracking history",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "citizenId": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "totalReportsFiled": { "type": "number" },
+        "firstReportAt": { "type": "string" },
+        "lastReportAt": { "type": "string" },
+        "complaintIds": { "type": "array", "items": { "type": "string" } },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "citizenId"]
+    },
+    "Complaint": {
+      "title": "Complaint",
+      "description": "Municipal complaint work orders",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "officialReferenceNumber": { "type": "string" },
+        "citizenId": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "location": { "type": "string" },
+        "departmentId": { "type": "string" },
+        "departmentName": { "type": "string" },
+        "status": { "type": "string" },
+        "priority": { "type": "string" },
+        "submitterName": { "type": "string" },
+        "submitterEmail": { "type": "string" },
+        "submitterPhone": { "type": "string" },
+        "photoUrl": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "title", "departmentId", "status"]
+    },
+    "CivicReport": {
+      "title": "CivicReport",
+      "description": "Citizen civic reports submitted and mirrored across cloud databases",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "user_id": { "type": "string" },
+        "mobile_number": { "type": "string" },
+        "image_url": { "type": "string" },
+        "ai_description": { "type": "string" },
+        "user_description": { "type": "string" },
+        "latitude": { "type": "number" },
+        "longitude": { "type": "number" },
+        "address": { "type": "string" },
+        "department": { "type": "string" },
+        "status": { "type": "string" },
+        "created_at": { "type": "string" },
+        "updated_at": { "type": "string" }
+      },
+      "required": ["id", "user_id", "user_description"]
+    },
+    "AuditLog": {
+      "title": "AuditLog",
+      "description": "Security and RBAC access ledger",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "timestamp": { "type": "string" },
+        "eventType": { "type": "string" },
+        "officerBadge": { "type": "string" },
+        "officerName": { "type": "string" },
+        "officerRole": { "type": "string" },
+        "action": { "type": "string" },
+        "complaintId": { "type": "string" },
+        "details": { "type": "string" }
+      },
+      "required": ["id", "timestamp", "eventType", "details"]
+    },
+    "Department": {
+      "title": "Department",
+      "description": "Municipal department definitions and categories",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "code": { "type": "string" },
+        "description": { "type": "string" },
+        "categories": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["id", "name", "code"]
+    }
+  },
+  "firestore": {
+    "/gov_users/{userId}": {
+      "schema": "GovUser",
+      "description": "Government staff, dispatchers, field supervisors, and administrators"
+    },
+    "/citizen_users/{citizenId}": {
+      "schema": "CitizenUser",
+      "description": "Citizen profile registry and complaint history"
+    },
+    "/complaints/{complaintId}": {
+      "schema": "Complaint",
+      "description": "Civic complaints and work orders"
+    },
+    "/civic_reports/{reportId}": {
+      "schema": "CivicReport",
+      "description": "Citizen field reports with geotags and AI inspection logs"
+    },
+    "/audit_logs/{logId}": {
+      "schema": "AuditLog",
+      "description": "Append-only municipal security and RBAC audit logs"
+    },
+    "/departments/{deptId}": {
+      "schema": "Department",
+      "description": "Municipal agencies and department categories"
+    }
+  }
+}

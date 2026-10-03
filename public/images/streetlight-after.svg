@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="nightSky2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a1829" />
+      <stop offset="100%" stop-color="#142c4c" />
+    </linearGradient>
+    <linearGradient id="ledBeam" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(254, 240, 138, 0.7)" />
+      <stop offset="60%" stop-color="rgba(254, 240, 138, 0.3)" />
+      <stop offset="100%" stop-color="rgba(254, 240, 138, 0)" />
+    </linearGradient>
+    <radialGradient id="crosswalkGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(254, 240, 138, 0.45)" />
+      <stop offset="100%" stop-color="rgba(254, 240, 138, 0)" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background Sky -->
+  <rect width="800" height="600" fill="url(#nightSky2)" />
+
+  <!-- Roadway & Brightly Illuminated Crosswalk -->
+  <polygon points="0,600 800,600 650,420 150,420" fill="#1f2937" />
+
+  <!-- LED Light Cone Beaming Downward -->
+  <polygon points="285,85 50,600 620,600" fill="url(#ledBeam)" />
+  <ellipse cx="330" cy="530" rx="260" ry="60" fill="url(#crosswalkGlow)" />
+
+  <!-- Crisp Illuminated White Crosswalk Zebra Stripes -->
+  <g fill="#f8fafc">
+    <rect x="240" y="470" width="30" height="90" transform="skewX(-20)" />
+    <rect x="320" y="470" width="30" height="90" transform="skewX(-20)" />
+    <rect x="400" y="470" width="30" height="90" transform="skewX(-20)" />
+    <rect x="480" y="470" width="30" height="90" transform="skewX(-20)" />
+  </g>
+
+  <!-- Municipal Steel Streetlight Pole (Repaired & Secured) -->
+  <g transform="translate(380, 40)">
+    <!-- Base Concrete Plinth -->
+    <rect x="-30" y="480" width="60" height="30" rx="4" fill="#64748b" stroke="#334155" stroke-width="2" />
+    <!-- Tapered Steel Mast -->
+    <polygon points="-12,480 12,480 8,120 -8,120" fill="#cbd5e1" stroke="#64748b" stroke-width="2" />
+
+    <!-- Inspection Hatch Secured with Safety Seal -->
+    <rect x="-8" y="400" width="16" height="35" rx="2" fill="#94a3b8" stroke="#16a34a" stroke-width="2" />
+    <rect x="-4" y="415" width="8" height="6" rx="1" fill="#22c55e" />
+
+    <!-- Curved Luminaire Arm -->
+    <path d="M 0,120 Q 0,40 -90,30" fill="none" stroke="#cbd5e1" stroke-width="12" />
+
+    <!-- Brand New 120W High-Efficiency LED Luminaire Head -->
+    <path d="M -130,45 L -70,25 L -65,38 L -125,58 Z" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2" />
+    <!-- Glowing Luminaire Lens -->
+    <ellipse cx="-95" cy="46" rx="28" ry="8" fill="#fef08a" stroke="#ffffff" stroke-width="2" />
+    <ellipse cx="-95" cy="46" rx="20" ry="5" fill="#ffffff" />
+  </g>
+
+  <!-- Official Electrical Dept Proof Stamp -->
+  <g transform="translate(430, 360)">
+    <rect x="-10" y="-10" width="340" height="150" rx="8" fill="rgba(6, 78, 59, 0.95)" stroke="#34d399" stroke-width="2.5" />
+    <circle cx="45" cy="65" r="36" fill="#047857" stroke="#fbbf24" stroke-width="2.5" />
+    <text x="45" y="60" fill="#fbbf24" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">TESTED</text>
+    <text x="45" y="75" fill="#ffffff" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">✓</text>
+    <text x="45" y="88" fill="#fbbf24" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle">ACTIVE</text>
+
+    <text x="96" y="28" fill="#34d399" font-family="Arial, sans-serif" font-size="12" font-weight="bold" letter-spacing="1">
+      ELECTRICAL PROOF OF WORK
+    </text>
+    <text x="96" y="50" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+      120W LED Fixture Restored
+    </text>
+    <text x="96" y="70" fill="#a7f3d0" font-family="monospace" font-size="11">
+      POLE: LP-W1-14 | ILLUMINATION: 52 LUX
+    </text>
+    <text x="96" y="88" fill="#a7f3d0" font-family="monospace" font-size="11">
+      CREW: Electrical Sub-Division Line-04
+    </text>
+    <text x="96" y="106" fill="#6ee7b7" font-family="monospace" font-size="10">
+      SAFETY: Hatch Sealed &amp; Grounded
+    </text>
+  </g>
+
+  <!-- Green "AFTER: RESTORED & TESTED" Banner -->
+  <g transform="translate(510, 20)">
+    <rect width="270" height="38" rx="4" fill="#059669" stroke="#ffffff" stroke-width="1.5" />
+    <text x="135" y="24" fill="#ffffff" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">
+      ✓ AFTER: RESTORED &amp; TESTED
+    </text>
+  </g>
+</svg>

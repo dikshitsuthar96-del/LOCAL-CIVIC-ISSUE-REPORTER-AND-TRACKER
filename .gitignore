@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+backend/venv/
+backend/__pycache__/
+*.pyc
+
+# Production Builds
+dist/
+build/
+.vercel/
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Databases & Logs
+*.db
+*.sqlite
+*.sqlite3
+*.log
+
+# System & Duplicate Files
+.DS_Store
+Thumbs.db
+LOCAL CIVIC ISSUE REPORTER AND TRACKER/
+LOCAL\ CIVIC\ ISSUE\ REPORTER\ AND\ TRACKER/

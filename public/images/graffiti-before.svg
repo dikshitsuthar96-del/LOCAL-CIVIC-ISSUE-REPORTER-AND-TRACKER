@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <rect width="800" height="600" fill="#64748b" />
+  <rect x="80" y="100" width="640" height="420" fill="#94a3b8" stroke="#475569" stroke-width="4" />
+  <path d="M 160,260 Q 240,160 360,260 T 560,240" stroke="#dc2626" stroke-width="14" fill="none" />
+  <path d="M 220,340 Q 340,390 440,320 T 600,380" stroke="#7c3aed" stroke-width="12" fill="none" />
+  <g transform="translate(20, 20)">
+    <rect width="380" height="74" rx="4" fill="rgba(11, 34, 57, 0.92)" stroke="#e11d48" stroke-width="2" />
+    <text x="14" y="24" fill="#f43f5e" font-family="Arial, sans-serif" font-size="11" font-weight="bold" letter-spacing="1">⚠️ CIVIC DEFECT EVIDENCE • PUBLIC WALL</text>
+    <text x="14" y="44" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Defaced Public Property / Wall Tagging</text>
+    <text x="14" y="62" fill="#94a3b8" font-family="monospace" font-size="11">AREA: 8.5m² Defacement | PROPERTY: MUNI CORRIDOR</text>
+  </g>
+  <g transform="translate(610, 20)">
+    <rect width="170" height="38" rx="4" fill="#e11d48" stroke="#ffffff" stroke-width="1.5" />
+    <text x="85" y="24" fill="#ffffff" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">BEFORE CLEANUP</text>
+  </g>
+</svg>

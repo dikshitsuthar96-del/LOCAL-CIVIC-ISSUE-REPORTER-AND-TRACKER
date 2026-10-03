@@ -1,0 +1,11 @@
+{
+  "name": "Remix Remix Remix Remix Civic Issue Reporter \u0026 Tracker",
+  "description": "Citizen municipal issue reporting and tracking platform featuring real-time timeline progress synchronization, multimodal AI intake classification, department routing, and automated status monitoring.",
+  "requestFramePermissions": [
+    "geolocation",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

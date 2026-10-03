@@ -1,0 +1,96 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 1. Global Default Deny Catch-All
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Input and ID Validation Helper Functions
+    function isValidId(id) {
+      return id is string && id.size() > 0 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-\\.:]+$');
+    }
+
+    function isValidGovUser(data) {
+      return data.id is string && data.id.size() <= 128
+        && data.badgeNumber is string && data.badgeNumber.size() <= 64
+        && data.name is string && data.name.size() <= 128
+        && data.role is string && data.role.size() <= 64
+        && data.departmentId is string && data.departmentId.size() <= 64;
+    }
+
+    function isValidCitizenUser(data) {
+      return data.id is string && data.id.size() <= 128
+        && data.citizenId is string && data.citizenId.size() <= 128
+        && data.name is string && data.name.size() <= 128;
+    }
+
+    function isValidComplaint(data) {
+      return data.id is string && data.id.size() <= 128
+        && data.title is string && data.title.size() <= 256
+        && data.departmentId is string && data.departmentId.size() <= 64
+        && data.status is string && data.status.size() <= 64;
+    }
+
+    function isValidCivicReport(data) {
+      return data.id is string && data.id.size() <= 128
+        && data.user_id is string && data.user_id.size() <= 128
+        && data.user_description is string && data.user_description.size() <= 5000;
+    }
+
+    function isValidAuditLog(data) {
+      return data.id is string && data.id.size() <= 128
+        && data.timestamp is string && data.timestamp.size() <= 64
+        && data.eventType is string && data.eventType.size() <= 64
+        && data.details is string && data.details.size() <= 5000;
+    }
+
+    function isValidDepartment(data) {
+      return data.id is string && data.id.size() <= 128
+        && data.name is string && data.name.size() <= 128
+        && data.code is string && data.code.size() <= 64;
+    }
+
+    // Government staff & officers
+    match /gov_users/{userId} {
+      allow read: if true;
+      allow create, update: if isValidId(userId) && isValidGovUser(request.resource.data);
+      allow delete: if false;
+    }
+
+    // Citizen user profiles & generated citizen IDs
+    match /citizen_users/{citizenId} {
+      allow read: if true;
+      allow create, update: if isValidId(citizenId) && isValidCitizenUser(request.resource.data);
+      allow delete: if false;
+    }
+
+    // Municipal complaints and work orders
+    match /complaints/{complaintId} {
+      allow read: if true;
+      allow create, update: if isValidId(complaintId) && isValidComplaint(request.resource.data);
+      allow delete: if false;
+    }
+
+    // Citizen civic reports & multimodal field records
+    match /civic_reports/{reportId} {
+      allow read: if true;
+      allow create, update: if isValidId(reportId) && isValidCivicReport(request.resource.data);
+      allow delete: if false;
+    }
+
+    // Security and RBAC audit logs (append-only, immutable)
+    match /audit_logs/{logId} {
+      allow read: if true;
+      allow create: if isValidId(logId) && isValidAuditLog(request.resource.data);
+      allow update, delete: if false;
+    }
+
+    // Municipal departments
+    match /departments/{deptId} {
+      allow read: if true;
+      allow create, update: if isValidId(deptId) && isValidDepartment(request.resource.data);
+      allow delete: if false;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="freshAsphalt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181a20" />
+      <stop offset="50%" stop-color="#232730" />
+      <stop offset="100%" stop-color="#14161b" />
+    </linearGradient>
+    <pattern id="roadBase" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="#383e4a" />
+      <circle cx="5" cy="12" r="1.5" fill="#252a33" />
+      <circle cx="18" cy="8" r="1" fill="#4f5666" />
+      <circle cx="28" cy="24" r="2" fill="#20242c" />
+    </pattern>
+    <linearGradient id="compactorTexture" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.08)" />
+      <stop offset="50%" stop-color="rgba(0,0,0,0.15)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0.05)" />
+    </linearGradient>
+  </defs>
+
+  <!-- Base Existing Road -->
+  <rect width="800" height="600" fill="url(#roadBase)" />
+
+  <!-- Road White Marking Striping (Restored & Fresh) -->
+  <polygon points="120,0 200,0 170,600 90,600" fill="#f8fafc" />
+
+  <!-- The Fresh Hot-Mix Asphalt Patch (Smooth, Roller-Compacted) -->
+  <path d="M 240,160 C 400,140 560,150 640,210 C 710,270 700,430 620,490 C 530,550 340,540 250,480 C 180,420 170,220 240,160 Z" fill="url(#freshAsphalt)" stroke="#0f1115" stroke-width="4" />
+
+  <!-- Roller Compaction Lap Marks (Demonstrating Professional PWD Execution) -->
+  <g stroke="rgba(255, 255, 255, 0.05)" stroke-width="20" fill="none">
+    <line x1="220" y1="240" x2="660" y2="240" />
+    <line x1="200" y1="310" x2="680" y2="310" />
+    <line x1="210" y1="380" x2="670" y2="380" />
+    <line x1="240" y1="450" x2="640" y2="450" />
+  </g>
+
+  <!-- Bitumen Joint Sealing Line along Patch Perimeter -->
+  <path d="M 240,160 C 400,140 560,150 640,210 C 710,270 700,430 620,490 C 530,550 340,540 250,480 C 180,420 170,220 240,160 Z" fill="none" stroke="#000000" stroke-width="6" opacity="0.6" stroke-dasharray="8,4" />
+
+  <!-- Restored Crisp Thermoplastic Lane Alignment Line across the Patch -->
+  <polygon points="175,200 195,200 182,450 162,450" fill="#ffffff" />
+
+  <!-- Official PWD Certified Proof of Work Stamp -->
+  <g transform="translate(420, 360)">
+    <rect x="-10" y="-10" width="350" height="150" rx="8" fill="rgba(6, 78, 59, 0.95)" stroke="#34d399" stroke-width="2.5" />
+    <!-- Gold/Green Certification Seal -->
+    <circle cx="45" cy="65" r="36" fill="#047857" stroke="#fbbf24" stroke-width="2.5" />
+    <text x="45" y="60" fill="#fbbf24" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">OFFICIAL</text>
+    <text x="45" y="75" fill="#ffffff" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">✓</text>
+    <text x="45" y="88" fill="#fbbf24" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle">VERIFIED</text>
+
+    <text x="96" y="28" fill="#34d399" font-family="Arial, sans-serif" font-size="12" font-weight="bold" letter-spacing="1">
+      CERTIFIED PROOF OF WORK
+    </text>
+    <text x="96" y="50" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+      Road Re-surfaced & Leveled
+    </text>
+    <text x="96" y="70" fill="#a7f3d0" font-family="monospace" font-size="11">
+      MATERIAL: VG-30 Bitumen + 20mm Stone
+    </text>
+    <text x="96" y="88" fill="#a7f3d0" font-family="monospace" font-size="11">
+      ENGINEER: Er. Rajesh V. Sharma (EXEC-449)
+    </text>
+    <text x="96" y="106" fill="#6ee7b7" font-family="monospace" font-size="10">
+      QUALITY: Compaction Passed 98.4%
+    </text>
+  </g>
+
+  <!-- Green "AFTER: REPAIRED & VERIFIED" Banner -->
+  <g transform="translate(520, 20)">
+    <rect width="260" height="38" rx="4" fill="#059669" stroke="#ffffff" stroke-width="1.5" />
+    <text x="130" y="24" fill="#ffffff" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">
+      ✓ AFTER: REPAIRED &amp; VERIFIED
+    </text>
+  </g>
+</svg>
